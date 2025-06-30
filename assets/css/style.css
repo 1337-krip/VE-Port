@@ -1,0 +1,439 @@
+/* font-family: 'Noto Serif', serif;
+font-family: 'Oswald', sans-serif; */
+
+html, body {
+  font-family: "Noto Serif", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ededed;
+  background-color: #171717;
+  /* mobile viewport fix */
+  padding: 0;
+  margin: 0;
+  height: 100vh; /* fallback for Js load */
+  height: var(--doc-height);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.main-site-wrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+a {
+  color: #ededed !important;
+}
+
+.menu {
+  color: #da0037 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
+  color: #ededed;
+}
+
+p {
+  color: #ededed;
+}
+
+.title {
+  line-height: 0.9 !important;
+  font-size: 15vw !important;
+  font-family: "Oswald", sans-serif;
+}
+
+.sub-title {
+  margin-top: 15vh;
+  font-size: 3rem;
+  text-align: right;
+  color: #da0037;
+  font-family: "Oswald", sans-serif;
+}
+
+.heading {
+  overflow: hidden;
+  border-bottom: 4px solid #da0037;
+}
+
+.section-heading {
+  padding-top: 15vh;
+  padding-bottom: 8vh;
+  text-align: center;
+  color: #ededed;
+}
+
+#soft-title {
+  text-align: left;
+  padding-left: 13%;
+}
+
+.list-text {
+  color: #ededed;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 45px;
+  font-size: 14px;
+}
+
+.skills {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+/* Navbar settings */
+nav {
+  background-color: transparent !important;
+}
+
+nav.nav-center ul {
+  text-align: center;
+}
+
+nav.nav-center ul li {
+  display: inline;
+  float: none;
+}
+
+nav.nav-center ul li a {
+  display: inline-block;
+}
+
+nav ul a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+
+nav ul li a {
+  color: #ededed;
+  font-size: 1.3em;
+}
+
+#nav-wrapper {
+  overflow: hidden;
+  z-index: 4;
+}
+
+#nav-mobile a:hover, #nav-mobile a:focus {
+  color: #565656 !important;
+}
+
+/* Mobile Navbar settings */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(24, 24, 24, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #ededed;
+  display: block;
+  transition: 0.3s;
+  font-size: 1.3em;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #565656;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+#side-nav {
+  display: none;
+  text-align: center;
+  /* margin-top: -30vh; */
+}
+
+/* sticky navbar */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 0px;
+}
+
+/* START NEW/MODIFIED ABOUT SECTION CSS */
+#about.section {
+  padding: 20px; /* Add some padding inside the grey box */
+  color: #fff; /* White text for contrast on grey background */
+}
+
+/* Remove or modify existing #about-info if it conflicts too much
+   If you want to keep any specific padding from the old #about-info,
+   you can merge it here or within #about-content / #about-info-text */
+#about-info {
+  /* text-align: left; /* Text alignment handled by #about-info-text and flexbox */
+  /* padding: 30px; /* Padding for the inner content, can be adjusted */
+  /* background-color: #565656; /* Moved to #about.section */
+  /* border-radius: 5px; /* Moved to #about.section */
+}
+
+
+#about-content {
+  display: flex; /* Use flexbox for image and text layout */
+  align-items: flex-start; /* Align items to the start (top) */
+  gap: 20px; /* Space between the image and the text */
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  padding: 30px; /* Apply the padding that was on #about-info here */
+}
+
+#owen-pic {
+  width: 150px; /* Adjust as needed for the desired image size */
+  height: 150px; /* Make height equal to width for a perfect circle */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 50%; /* Make the image circular */
+  /* float: left; /* Flexbox handles layout, float is not strictly needed here but doesn't hurt */
+  /* If you want the subtle border from your old #owen-pic, add it back here: */
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(24, 24, 24, 0.9);
+  /* Margins are now controlled by flexbox gap and potential explicit margins */
+  margin-right: 20px; /* Space to the right of the image when next to text */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+/* Remove #owen-pic-3 as it's no longer used in the HTML */
+/*
+#owen-pic-3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(24, 24, 24, 0.9);
+  margin-bottom: 20px;
+}
+*/
+
+#about-info-text { /* New ID for the paragraph */
+  flex: 1; /* Allow the text to take up remaining space */
+  line-height: 1.6; /* Improve readability */
+  text-align: justify; /* Justify the text as seen in the image */
+}
+
+/* Media queries for responsiveness for the about section */
+@media screen and (max-width: 992px) { /* For tablets and smaller */
+  #owen-pic {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) { /* For mobile devices */
+  #about-content {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center them horizontally when stacked */
+    text-align: center; /* Center text when stacked */
+  }
+
+  #owen-pic {
+    /* float: none; */ /* Not strictly needed if flex-direction is column */
+    margin-right: 0;
+    margin-bottom: 15px; /* Add space below image when stacked */
+    width: 100px;
+    height: 100px;
+  }
+  #about-info-text {
+    text-align: center; /* Center text when stacked on small screens */
+  }
+}
+/* END NEW/MODIFIED ABOUT SECTION CSS */
+
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(#000000, #171717);
+}
+
+#contact {
+  background-image: linear-gradient(#171717, #565656);
+  margin-top: 200px;
+}
+
+#contact-title {
+  margin-top: -100px;
+}
+
+.contact-content a {
+  color: #ededed;
+}
+
+.contact-content a:hover,
+.contact-content a:focus {
+  color: #da0037 !important;
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+
+.page-footer {
+  text-align: center;
+  padding-top: 20px !important;
+  margin-bottom: 20px;
+  background-color: transparent !important;
+  z-index: 100;
+  height: 60px;
+}
+
+#c-right {
+  margin-top: -100px;
+}
+
+/* animated arrow down */
+.wrap-around {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color:#da0037;
+}
+.wrap-around a, #contact-me{
+  text-align: center !important;
+  color:#da0037;
+}
+
+/* Diagnol line on contact panel */
+.wave {
+  background-color: #171717;
+}
+
+.wave svg {
+  display: block;
+}
+
+.wave.upper {
+  background-color: #565656;
+  padding-bottom: 0;
+}
+
+/* grayscale youtube videos */
+/* iframe {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  border-radius: 5px;
+  padding-bottom: 5px;
+} */
+
+
+
+
+@media screen and (max-width: 1245px){
+  .sub-title {
+    font-size: 3rem;
+    margin-top: 8vh;
+  }
+
+  .main-site-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .sub-title {
+    font-size: 2.5rem;
+    margin-top: 8vh;
+  }
+  .title {
+    font-size: 18vw !important;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .main-site-wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  body {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  #nav-wrapper {
+      display: none;
+  }
+  #side-nav {
+      display: block;
+  }
+  .sub-title {
+    font-size: 2rem;
+    margin-top: 6vh;
+  }
+  .title {
+    font-size: 19vw !important;
+  }
+}
+
+  @media screen and (max-width: 480px){
+  .wave.upper {
+    margin-bottom: 50px;
+    padding-bottom: -10px;
+  }
+  .step-description {
+    text-align: center;
+  }
+  #soft-title {
+    text-align: center;
+    padding: 0;
+  }
+  iframe {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .sub-title {
+    font-size: 1.5rem;
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 251px){
+  .sub-title {
+    font-size: 1rem;
+  }
+}
